@@ -13,9 +13,8 @@ class MainActivity : AppCompatActivity() {
         val seekBar = findViewById<AppCompatSeekBar>(R.id.seekBar)
         var totalCompleted = 0
 
-        timer(initialDelay = 0L, period = 1000L){
-            if (totalCompleted == 90)
-                cancel()
+        timer(initialDelay = 0L, period = 1000L) {
+            if (totalCompleted == 90) cancel()
 
             totalCompleted += 10
             seekBar.progress = totalCompleted
